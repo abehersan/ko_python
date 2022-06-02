@@ -35,4 +35,45 @@ Programmieren ist zu 50 % Planung und zu 50 % online nachschauen, wie es geht!
 Vergessen Sie nicht, die "random"-Bibliothek in Ihr Skript zu importieren! (`import random`)
 Probieren Sie [diesen Link](https://www.w3schools.com/python/ref_random_choice.asp) aus, um zu sehen, wie die Methode `random.choice()` funktioniert.
 
+## CODE
 
+```python
+
+import random
+
+choices = ["stein", "schere", "papier"]
+    
+player = input("\n Du spielst jetzt Stein, Papier, Schere... Gib deine Wahl ein!\n")
+player = player.lower()
+
+if player not in choices:
+    print("Gib bite eine gültige Option ein!")
+else:
+    computer = random.choice(choices)
+
+print(f"Player hat {player} gewählt")
+print(f"Compi hat {computer} gewählt")
+
+if player == computer:
+    print("Tie! ):")
+
+elif player == "stein":
+    if computer == "schere":
+        print("Player won!")
+    elif computer == "papier":
+        print("Computer won!")
+
+elif player == "schere":
+    if computer == "papier":
+        print("Player won!")
+    elif computer == "stein":
+        print("Computer won!")
+
+elif player == "papier":
+    if computer == "stein":
+        print("Player won!")
+    elif computer == "schere":
+        print("Computer won!")
+
+
+```
